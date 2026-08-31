@@ -8,9 +8,10 @@ const PORT = process.env.PORT || 3000;
 const PHP_API_BASE = "https://nipssmuslim.com.ng/ngitAI";
 const API_KEY = process.env.API_KEY;
 
-app.use(express.json({ limit: "1mb" }));
-app.use(express.static(path.join(__dirname)));
 
+app.use(express.json({ limit: "1mb" }));
+
+app.use(express.static(path.join(__dirname)));
 /* =========================================================
    CONFIG CHECK
 ========================================================= */
