@@ -1,0 +1,13 @@
+{
+  "name": "ngit-ai-mentor",
+  "version": "1.0.0",
+  "description": "NGIT AI Mentor server proxy",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2"
+  }
+}
