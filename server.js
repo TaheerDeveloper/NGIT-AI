@@ -260,6 +260,10 @@ Important rules:
    HEALTH CHECK
 ========================================================= */
 
+/* =========================================================
+   HEALTH CHECK
+========================================================= */
+
 app.get("/api/health", (req, res) => {
   res.json({
     success: true,
@@ -268,11 +272,12 @@ app.get("/api/health", (req, res) => {
 });
 
 /* =========================================================
-   SERVER
+   VERCEL SERVERLESS EXPORT
 ========================================================= */
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`NGIT AI Mentor server running at http://localhost:${PORT}`);
+  });
+}
 
-app.listen(PORT, () => {
-  console.log(
-    `NGIT AI Mentor server running at http://localhost:${PORT}`
-  );
-});
+module.exports = app;
